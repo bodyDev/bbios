@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		048CAC151C4122A600C7A6A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 048CAC141C4122A600C7A6A3 /* main.m */; };
 		048CAC181C4122A600C7A6A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 048CAC171C4122A600C7A6A3 /* AppDelegate.m */; };
-		048CAC1B1C4122A600C7A6A3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 048CAC1A1C4122A600C7A6A3 /* ViewController.m */; };
 		048CAC1E1C4122A600C7A6A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048CAC1C1C4122A600C7A6A3 /* Main.storyboard */; };
 		048CAC201C4122A600C7A6A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048CAC1F1C4122A600C7A6A3 /* Assets.xcassets */; };
 		048CAC231C4122A600C7A6A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048CAC211C4122A600C7A6A3 /* LaunchScreen.storyboard */; };
@@ -20,6 +19,9 @@
 		048CAC551C41253C00C7A6A3 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048CAC511C41253B00C7A6A3 /* FBSDKCoreKit.framework */; };
 		048CAC561C41253C00C7A6A3 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048CAC521C41253B00C7A6A3 /* FBSDKLoginKit.framework */; };
 		048CAC591C41273100C7A6A3 /* BKCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 048CAC581C41273100C7A6A3 /* BKCache.m */; };
+		048CAC5B1C41CAB400C7A6A3 /* readme.md in Sources */ = {isa = PBXBuildFile; fileRef = 048CAC5A1C41CAB400C7A6A3 /* readme.md */; };
+		048CAC5E1C41CE1C00C7A6A3 /* BKLandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 048CAC5D1C41CE1C00C7A6A3 /* BKLandingViewController.m */; };
+		048CAC621C41CE7000C7A6A3 /* BKInitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 048CAC611C41CE7000C7A6A3 /* BKInitialViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,8 +46,6 @@
 		048CAC141C4122A600C7A6A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		048CAC161C4122A600C7A6A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		048CAC171C4122A600C7A6A3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		048CAC191C4122A600C7A6A3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		048CAC1A1C4122A600C7A6A3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		048CAC1D1C4122A600C7A6A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		048CAC1F1C4122A600C7A6A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		048CAC221C4122A600C7A6A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,6 +62,11 @@
 		048CAC521C41253B00C7A6A3 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Frameworks/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		048CAC571C41273100C7A6A3 /* BKCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BKCache.h; path = Library/BKCache/BKCache.h; sourceTree = "<group>"; };
 		048CAC581C41273100C7A6A3 /* BKCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BKCache.m; path = Library/BKCache/BKCache.m; sourceTree = "<group>"; };
+		048CAC5A1C41CAB400C7A6A3 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
+		048CAC5C1C41CE1C00C7A6A3 /* BKLandingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BKLandingViewController.h; path = Pages/Landing/Controller/BKLandingViewController.h; sourceTree = "<group>"; };
+		048CAC5D1C41CE1C00C7A6A3 /* BKLandingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BKLandingViewController.m; path = Pages/Landing/Controller/BKLandingViewController.m; sourceTree = "<group>"; };
+		048CAC601C41CE7000C7A6A3 /* BKInitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BKInitialViewController.h; path = "Pages/Initial Navigation/BKInitialViewController.h"; sourceTree = "<group>"; };
+		048CAC611C41CE7000C7A6A3 /* BKInitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BKInitialViewController.m; path = "Pages/Initial Navigation/BKInitialViewController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +125,7 @@
 				048CAC4E1C4124CA00C7A6A3 /* Pages */,
 				048CAC131C4122A600C7A6A3 /* Supporting Files */,
 				048CAC4C1C41237B00C7A6A3 /* Views */,
+				048CAC5A1C41CAB400C7A6A3 /* readme.md */,
 			);
 			path = BodyBeat;
 			sourceTree = "<group>";
@@ -166,8 +172,8 @@
 		048CAC481C41231400C7A6A3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				048CAC191C4122A600C7A6A3 /* ViewController.h */,
-				048CAC1A1C4122A600C7A6A3 /* ViewController.m */,
+				048CAC5C1C41CE1C00C7A6A3 /* BKLandingViewController.h */,
+				048CAC5D1C41CE1C00C7A6A3 /* BKLandingViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -219,9 +225,19 @@
 		048CAC4E1C4124CA00C7A6A3 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				048CAC5F1C41CE3700C7A6A3 /* Inital Navigation */,
 				048CAC471C41230B00C7A6A3 /* Landing */,
 			);
 			name = Pages;
+			sourceTree = "<group>";
+		};
+		048CAC5F1C41CE3700C7A6A3 /* Inital Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				048CAC601C41CE7000C7A6A3 /* BKInitialViewController.h */,
+				048CAC611C41CE7000C7A6A3 /* BKInitialViewController.m */,
+			);
+			name = "Inital Navigation";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,9 +374,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				048CAC1B1C4122A600C7A6A3 /* ViewController.m in Sources */,
 				048CAC591C41273100C7A6A3 /* BKCache.m in Sources */,
+				048CAC5E1C41CE1C00C7A6A3 /* BKLandingViewController.m in Sources */,
+				048CAC621C41CE7000C7A6A3 /* BKInitialViewController.m in Sources */,
 				048CAC181C4122A600C7A6A3 /* AppDelegate.m in Sources */,
+				048CAC5B1C41CAB400C7A6A3 /* readme.md in Sources */,
 				048CAC151C4122A600C7A6A3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -595,6 +613,7 @@
 				048CAC3F1C4122A600C7A6A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		048CAC401C4122A600C7A6A3 /* Build configuration list for PBXNativeTarget "BodyBeatTests" */ = {
 			isa = XCConfigurationList;
@@ -603,6 +622,7 @@
 				048CAC421C4122A600C7A6A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		048CAC431C4122A600C7A6A3 /* Build configuration list for PBXNativeTarget "BodyBeatUITests" */ = {
 			isa = XCConfigurationList;
@@ -611,6 +631,7 @@
 				048CAC451C4122A600C7A6A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

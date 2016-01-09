@@ -26,12 +26,14 @@
 @synthesize twitterId;
 @synthesize googleplusId;
 @synthesize userType;
+@synthesize height;
+@synthesize weight;
+@synthesize bodyType;
 @synthesize isUserConnectedWithFacebook;
 @synthesize isUserConnectedWithEmail;
 @synthesize isUserConnectedWithGoogle;
 @synthesize isUserConnectedWithTwitter;
 @synthesize isAppInstalled;
-
 #pragma mark Singleton Methods
 
 /* Required */
@@ -58,6 +60,11 @@
         twitterId = [[NSUserDefaults standardUserDefaults] objectForKey:@"twitterId"];
         googleplusId = [[NSUserDefaults standardUserDefaults] objectForKey:@"googleplusId"];
         userType = [[NSUserDefaults standardUserDefaults] objectForKey:@"googleplusId"];
+        height = [[NSUserDefaults standardUserDefaults] objectForKey:@"height"];
+        weight = [[NSUserDefaults standardUserDefaults] objectForKey:@"weight"];
+        bodyType = [[NSUserDefaults standardUserDefaults] objectForKey:@"bodyType"];
+        
+        //TODO:Add bool controls
     }
     return self;
 }
@@ -78,6 +85,10 @@
     [[NSUserDefaults standardUserDefaults] setObject:@"twitterId" forKey:@"twitterId"];
     [[NSUserDefaults standardUserDefaults] setObject:@"googleplusId" forKey:@"googleplusId"];
     [[NSUserDefaults standardUserDefaults] setObject:@"userType" forKey:@"userType"];
+    [[NSUserDefaults standardUserDefaults] setObject:@"height" forKey:@"height"];
+    [[NSUserDefaults standardUserDefaults] setObject:@"weight" forKey:@"v"];
+    [[NSUserDefaults standardUserDefaults] setObject:@"bodyType" forKey:@"bodyType"];
+
     [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isUserConnectedWithFacebook"];
     [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isUserConnectedWithEmail"];
     [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isUserConnectedWithGoogle"];

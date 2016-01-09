@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface BKCache : NSObject {
+    
     NSString *appUserId;
     NSString *name;
     NSString *surname;
@@ -21,11 +22,16 @@
     NSString *twitterId;
     NSString *googleplusId;
     NSString *userType;
+    NSString *height;
+    NSString *weight;
+    NSString *bodyType;
+    
     BOOL isUserConnectedWithFacebook;
     BOOL isUserConnectedWithEmail;
     BOOL isUserConnectedWithGoogle;
     BOOL isUserConnectedWithTwitter;
     BOOL isAppInstalled;
+    
 }
 @property (nonatomic, retain) NSString *appUserId;
 @property (nonatomic, retain) NSString *name;
@@ -39,6 +45,10 @@
 @property (nonatomic, retain) NSString *twitterId;
 @property (nonatomic, retain) NSString *googleplusId;
 @property (nonatomic, retain) NSString *userType;
+@property (nonatomic, retain) NSString *height;
+@property (nonatomic, retain) NSString *weight;
+@property (nonatomic, retain) NSString *bodyType;
+
 @property BOOL isUserConnectedWithFacebook;
 @property BOOL isUserConnectedWithEmail;
 @property BOOL isUserConnectedWithGoogle;
@@ -48,5 +58,5 @@
 + (id)sharedManager;
 - (void) setAppDefaults;
 - (void) updateAppData:(NSString *)key withData:(NSObject*)data;
--(BOOL) checkAppInstalled;
+- (BOOL) checkAppInstalled;
 @end
