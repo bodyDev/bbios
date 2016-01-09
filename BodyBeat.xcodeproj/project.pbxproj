@@ -101,14 +101,11 @@
 		048CAC121C4122A600C7A6A3 /* BodyBeat */ = {
 			isa = PBXGroup;
 			children = (
+				048CAC4C1C41237B00C7A6A3 /* Views */,
+				048CAC4A1C41235900C7A6A3 /* Library */,
+				048CAC471C41230B00C7A6A3 /* Landing */,
 				048CAC161C4122A600C7A6A3 /* AppDelegate.h */,
 				048CAC171C4122A600C7A6A3 /* AppDelegate.m */,
-				048CAC191C4122A600C7A6A3 /* ViewController.h */,
-				048CAC1A1C4122A600C7A6A3 /* ViewController.m */,
-				048CAC1C1C4122A600C7A6A3 /* Main.storyboard */,
-				048CAC1F1C4122A600C7A6A3 /* Assets.xcassets */,
-				048CAC211C4122A600C7A6A3 /* LaunchScreen.storyboard */,
-				048CAC241C4122A600C7A6A3 /* Info.plist */,
 				048CAC131C4122A600C7A6A3 /* Supporting Files */,
 			);
 			path = BodyBeat;
@@ -117,6 +114,8 @@
 		048CAC131C4122A600C7A6A3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				048CAC1F1C4122A600C7A6A3 /* Assets.xcassets */,
+				048CAC241C4122A600C7A6A3 /* Info.plist */,
 				048CAC141C4122A600C7A6A3 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -138,6 +137,55 @@
 				048CAC3A1C4122A600C7A6A3 /* Info.plist */,
 			);
 			path = BodyBeatUITests;
+			sourceTree = "<group>";
+		};
+		048CAC471C41230B00C7A6A3 /* Landing */ = {
+			isa = PBXGroup;
+			children = (
+				048CAC481C41231400C7A6A3 /* Controller */,
+				048CAC491C41231C00C7A6A3 /* Model */,
+			);
+			name = Landing;
+			sourceTree = "<group>";
+		};
+		048CAC481C41231400C7A6A3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				048CAC191C4122A600C7A6A3 /* ViewController.h */,
+				048CAC1A1C4122A600C7A6A3 /* ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		048CAC491C41231C00C7A6A3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		048CAC4A1C41235900C7A6A3 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				048CAC4B1C41236900C7A6A3 /* BKCaching */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		048CAC4B1C41236900C7A6A3 /* BKCaching */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = BKCaching;
+			sourceTree = "<group>";
+		};
+		048CAC4C1C41237B00C7A6A3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				048CAC1C1C4122A600C7A6A3 /* Main.storyboard */,
+				048CAC211C4122A600C7A6A3 /* LaunchScreen.storyboard */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -415,6 +463,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BodyBeat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.BodyBeat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -426,6 +475,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BodyBeat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.BodyBeat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
