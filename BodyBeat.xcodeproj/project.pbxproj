@@ -19,6 +19,7 @@
 		048CAC541C41253C00C7A6A3 /* FacebookSDKStrings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 048CAC501C41253B00C7A6A3 /* FacebookSDKStrings.bundle */; };
 		048CAC551C41253C00C7A6A3 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048CAC511C41253B00C7A6A3 /* FBSDKCoreKit.framework */; };
 		048CAC561C41253C00C7A6A3 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048CAC521C41253B00C7A6A3 /* FBSDKLoginKit.framework */; };
+		048CAC591C41273100C7A6A3 /* BKCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 048CAC581C41273100C7A6A3 /* BKCache.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		048CAC501C41253B00C7A6A3 /* FacebookSDKStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKStrings.bundle; path = Frameworks/FacebookSDKStrings.bundle; sourceTree = "<group>"; };
 		048CAC511C41253B00C7A6A3 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Frameworks/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		048CAC521C41253B00C7A6A3 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Frameworks/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		048CAC571C41273100C7A6A3 /* BKCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BKCache.h; path = Library/BKCache/BKCache.h; sourceTree = "<group>"; };
+		048CAC581C41273100C7A6A3 /* BKCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BKCache.m; path = Library/BKCache/BKCache.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,16 +182,18 @@
 		048CAC4A1C41235900C7A6A3 /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				048CAC4B1C41236900C7A6A3 /* BKCaching */,
+				048CAC4B1C41236900C7A6A3 /* BKCache */,
 			);
 			name = Library;
 			sourceTree = "<group>";
 		};
-		048CAC4B1C41236900C7A6A3 /* BKCaching */ = {
+		048CAC4B1C41236900C7A6A3 /* BKCache */ = {
 			isa = PBXGroup;
 			children = (
+				048CAC571C41273100C7A6A3 /* BKCache.h */,
+				048CAC581C41273100C7A6A3 /* BKCache.m */,
 			);
-			name = BKCaching;
+			name = BKCache;
 			sourceTree = "<group>";
 		};
 		048CAC4C1C41237B00C7A6A3 /* Views */ = {
@@ -354,6 +359,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				048CAC1B1C4122A600C7A6A3 /* ViewController.m in Sources */,
+				048CAC591C41273100C7A6A3 /* BKCache.m in Sources */,
 				048CAC181C4122A600C7A6A3 /* AppDelegate.m in Sources */,
 				048CAC151C4122A600C7A6A3 /* main.m in Sources */,
 			);

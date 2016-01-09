@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "BKCache.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    // 1. App launch for first time
+    if (![[BKCache sharedManager] checkAppInstalled]) {
+        
+        //Create app default properties for first launch.
+        [[BKCache sharedManager] setAppDefaults];
+    }
     return YES;
 }
 
