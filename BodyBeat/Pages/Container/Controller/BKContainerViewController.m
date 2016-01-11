@@ -10,13 +10,19 @@
 
 @interface BKContainerViewController ()
 
+/* View definitions */
+@property (weak, nonatomic) IBOutlet UIView *viewContainer;
+
 @end
 
 @implementation BKContainerViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.viewContainer layoutIfNeeded];
 }
 
 - (void)didReceiveMemoryWarning {
