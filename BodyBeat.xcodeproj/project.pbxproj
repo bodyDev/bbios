@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		04677E3E1C43D74D0088B7D9 /* BKEmailLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04677E3D1C43D74D0088B7D9 /* BKEmailLoginViewController.m */; };
 		04677E411C43D77D0088B7D9 /* BKContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04677E401C43D77D0088B7D9 /* BKContainerViewController.m */; };
+		04677E4A1C43D9A60088B7D9 /* BKRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04677E491C43D9A60088B7D9 /* BKRegisterViewController.m */; };
 		048CAC151C4122A600C7A6A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 048CAC141C4122A600C7A6A3 /* main.m */; };
 		048CAC181C4122A600C7A6A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 048CAC171C4122A600C7A6A3 /* AppDelegate.m */; };
 		048CAC1E1C4122A600C7A6A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048CAC1C1C4122A600C7A6A3 /* Main.storyboard */; };
@@ -48,6 +49,8 @@
 		04677E3D1C43D74D0088B7D9 /* BKEmailLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BKEmailLoginViewController.m; path = "Pages/Email Login/Controller/BKEmailLoginViewController.m"; sourceTree = "<group>"; };
 		04677E3F1C43D77D0088B7D9 /* BKContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BKContainerViewController.h; path = Pages/Container/Controller/BKContainerViewController.h; sourceTree = "<group>"; };
 		04677E401C43D77D0088B7D9 /* BKContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BKContainerViewController.m; path = Pages/Container/Controller/BKContainerViewController.m; sourceTree = "<group>"; };
+		04677E481C43D9A60088B7D9 /* BKRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BKRegisterViewController.h; path = "Pages/Container/Sub Pages/Register/Controller/BKRegisterViewController.h"; sourceTree = "<group>"; };
+		04677E491C43D9A60088B7D9 /* BKRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BKRegisterViewController.m; path = "Pages/Container/Sub Pages/Register/Controller/BKRegisterViewController.m"; sourceTree = "<group>"; };
 		048CAC101C4122A600C7A6A3 /* BodyBeat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BodyBeat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		048CAC141C4122A600C7A6A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		048CAC161C4122A600C7A6A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -133,6 +136,7 @@
 			children = (
 				04677E3A1C43D70A0088B7D9 /* Controller */,
 				04677E3B1C43D7110088B7D9 /* Model */,
+				04677E441C43D9570088B7D9 /* Sub Pages */,
 			);
 			name = Container;
 			sourceTree = "<group>";
@@ -147,6 +151,46 @@
 			sourceTree = "<group>";
 		};
 		04677E3B1C43D7110088B7D9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		04677E421C43D8D50088B7D9 /* BKConnectionManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = BKConnectionManager;
+			sourceTree = "<group>";
+		};
+		04677E441C43D9570088B7D9 /* Sub Pages */ = {
+			isa = PBXGroup;
+			children = (
+				04677E451C43D9770088B7D9 /* Register */,
+			);
+			name = "Sub Pages";
+			sourceTree = "<group>";
+		};
+		04677E451C43D9770088B7D9 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				04677E461C43D9810088B7D9 /* Controller */,
+				04677E471C43D9880088B7D9 /* Model */,
+			);
+			name = Register;
+			sourceTree = "<group>";
+		};
+		04677E461C43D9810088B7D9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04677E481C43D9A60088B7D9 /* BKRegisterViewController.h */,
+				04677E491C43D9A60088B7D9 /* BKRegisterViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		04677E471C43D9880088B7D9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -244,6 +288,7 @@
 		048CAC4A1C41235900C7A6A3 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				04677E421C43D8D50088B7D9 /* BKConnectionManager */,
 				048CAC4B1C41236900C7A6A3 /* BKCache */,
 			);
 			name = Library;
@@ -436,6 +481,7 @@
 				048CAC591C41273100C7A6A3 /* BKCache.m in Sources */,
 				048CAC5E1C41CE1C00C7A6A3 /* BKLandingViewController.m in Sources */,
 				048CAC621C41CE7000C7A6A3 /* BKInitialViewController.m in Sources */,
+				04677E4A1C43D9A60088B7D9 /* BKRegisterViewController.m in Sources */,
 				048CAC181C4122A600C7A6A3 /* AppDelegate.m in Sources */,
 				04677E411C43D77D0088B7D9 /* BKContainerViewController.m in Sources */,
 				048CAC5B1C41CAB400C7A6A3 /* readme.md in Sources */,
