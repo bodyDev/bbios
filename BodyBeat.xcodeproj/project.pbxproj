@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04677E3E1C43D74D0088B7D9 /* BKEmailLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04677E3D1C43D74D0088B7D9 /* BKEmailLoginViewController.m */; };
+		04677E411C43D77D0088B7D9 /* BKContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04677E401C43D77D0088B7D9 /* BKContainerViewController.m */; };
 		048CAC151C4122A600C7A6A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 048CAC141C4122A600C7A6A3 /* main.m */; };
 		048CAC181C4122A600C7A6A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 048CAC171C4122A600C7A6A3 /* AppDelegate.m */; };
 		048CAC1E1C4122A600C7A6A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048CAC1C1C4122A600C7A6A3 /* Main.storyboard */; };
@@ -42,6 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04677E3C1C43D74D0088B7D9 /* BKEmailLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BKEmailLoginViewController.h; path = "Pages/Email Login/Controller/BKEmailLoginViewController.h"; sourceTree = "<group>"; };
+		04677E3D1C43D74D0088B7D9 /* BKEmailLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BKEmailLoginViewController.m; path = "Pages/Email Login/Controller/BKEmailLoginViewController.m"; sourceTree = "<group>"; };
+		04677E3F1C43D77D0088B7D9 /* BKContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BKContainerViewController.h; path = Pages/Container/Controller/BKContainerViewController.h; sourceTree = "<group>"; };
+		04677E401C43D77D0088B7D9 /* BKContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BKContainerViewController.m; path = Pages/Container/Controller/BKContainerViewController.m; sourceTree = "<group>"; };
 		048CAC101C4122A600C7A6A3 /* BodyBeat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BodyBeat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		048CAC141C4122A600C7A6A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		048CAC161C4122A600C7A6A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -97,6 +103,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04677E331C43D66A0088B7D9 /* Email Login */ = {
+			isa = PBXGroup;
+			children = (
+				04677E341C43D67B0088B7D9 /* Controller */,
+				04677E351C43D6820088B7D9 /* Model */,
+			);
+			name = "Email Login";
+			sourceTree = "<group>";
+		};
+		04677E341C43D67B0088B7D9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04677E3C1C43D74D0088B7D9 /* BKEmailLoginViewController.h */,
+				04677E3D1C43D74D0088B7D9 /* BKEmailLoginViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		04677E351C43D6820088B7D9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		04677E391C43D7020088B7D9 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				04677E3A1C43D70A0088B7D9 /* Controller */,
+				04677E3B1C43D7110088B7D9 /* Model */,
+			);
+			name = Container;
+			sourceTree = "<group>";
+		};
+		04677E3A1C43D70A0088B7D9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04677E3F1C43D77D0088B7D9 /* BKContainerViewController.h */,
+				04677E401C43D77D0088B7D9 /* BKContainerViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		04677E3B1C43D7110088B7D9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		048CAC071C4122A600C7A6A3 = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +281,8 @@
 		048CAC4E1C4124CA00C7A6A3 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				04677E391C43D7020088B7D9 /* Container */,
+				04677E331C43D66A0088B7D9 /* Email Login */,
 				048CAC5F1C41CE3700C7A6A3 /* Inital Navigation */,
 				048CAC471C41230B00C7A6A3 /* Landing */,
 			);
@@ -374,10 +432,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04677E3E1C43D74D0088B7D9 /* BKEmailLoginViewController.m in Sources */,
 				048CAC591C41273100C7A6A3 /* BKCache.m in Sources */,
 				048CAC5E1C41CE1C00C7A6A3 /* BKLandingViewController.m in Sources */,
 				048CAC621C41CE7000C7A6A3 /* BKInitialViewController.m in Sources */,
 				048CAC181C4122A600C7A6A3 /* AppDelegate.m in Sources */,
+				04677E411C43D77D0088B7D9 /* BKContainerViewController.m in Sources */,
 				048CAC5B1C41CAB400C7A6A3 /* readme.md in Sources */,
 				048CAC151C4122A600C7A6A3 /* main.m in Sources */,
 			);
