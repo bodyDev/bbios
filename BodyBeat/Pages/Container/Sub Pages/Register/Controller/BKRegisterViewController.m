@@ -8,6 +8,7 @@
 
 #import "BKRegisterViewController.h"
 #import "Common.h"
+#import "SIAlertView.h"
 
 static NSString *emailRegEx = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
 
@@ -49,16 +50,58 @@ static NSString *emailRegEx = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}
 //Register button action
 - (IBAction)validateFormAndContinue:(id)sender {
     
+    //alert popup initialization - 1
+    SIAlertView *alertView = [[SIAlertView alloc] initWithTitle:@"BodyBeat" andMessage:@""];
+    
+    [alertView addButtonWithTitle:@"Tamam"
+                             type:SIAlertViewButtonTypeDefault
+                          handler:^(SIAlertView *alert) {
+                              NSLog(@"Button1 Clicked");
+                          }];
+    
+    //Check form validation
     switch ([self formValidation]) {
         case Validated:
             
+            //form validated
+            
+            break;
+            
+        //form not validated. Show correct message
+        case Empty:
+            alertView.message = @"Uygulamaya kayıt olabilmek için aşağıdaki bilgileri girmeniz gerekiyor.";
+            break;
+        case NotCorrect:
+            alertView.message = @"Eposta adresinizi doğrulayamadık. Lütfen tekrar deneyin.";
+            break;
+        case PasswordNotMatched:
+            alertView.message = @"Parolanızı doğrulayamadık. Lütfen tekrar deneyin.";
             break;
         case NotAgreedTerms:
-            
+            alertView.message = @"Uygulamaya kayıt olabilmek için katılım koşullarını kabul etmeniz gerekiyor.";
             break;
         default:
             break;
     }
+    
+    //alert popup initialization - 2
+    alertView.willShowHandler = ^(SIAlertView *alertView) {
+        NSLog(@"%@, willShowHandler", alertView);
+    };
+    alertView.didShowHandler = ^(SIAlertView *alertView) {
+        NSLog(@"%@, didShowHandler", alertView);
+    };
+    alertView.willDismissHandler = ^(SIAlertView *alertView) {
+        NSLog(@"%@, willDismissHandler", alertView);
+    };
+    alertView.didDismissHandler = ^(SIAlertView *alertView) {
+        NSLog(@"%@, didDismissHandler", alertView);
+    };
+    
+    alertView.transitionStyle = SIAlertViewTransitionStyleBounce;
+    
+    
+    [alertView show];
     
 }
 
