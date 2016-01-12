@@ -40,6 +40,7 @@ static NSString *emailRegEx = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}
     
     //other
     _isTermsAgreed = NO;
+    _btnAgreedTerms.layer.cornerRadius = 15;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -58,7 +59,8 @@ static NSString *emailRegEx = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}
                           handler:^(SIAlertView *alert) {
                               NSLog(@"Button1 Clicked");
                           }];
-    
+    [[SIAlertView appearance] setButtonColor:[UIColor colorWithRed:0.949 green:0.451 blue:0.18 alpha:1] /*#f2732e*/
+];
     //Check form validation
     switch ([self formValidation]) {
         case Validated:
@@ -69,7 +71,7 @@ static NSString *emailRegEx = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}
             
         //form not validated. Show correct message
         case Empty:
-            alertView.message = @"Uygulamaya kayıt olabilmek için aşağıdaki bilgileri girmeniz gerekiyor.";
+            alertView.message = @"Uygulamaya kayıt olabilmek için tüm bilgileri girmeniz gerekiyor.";
             break;
         case NotCorrect:
             alertView.message = @"Eposta adresinizi doğrulayamadık. Lütfen tekrar deneyin.";
@@ -124,23 +126,33 @@ static NSString *emailRegEx = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}
 // simple validation for form textboxes
 -(enum ValidationResult)formValidation
 {
-    if (!_isTermsAgreed) {
-        return NotAgreedTerms;
+    
+    if ([_txtEmail.text isEqualToString:@""]) {
+        return Empty;
+    }
+    if (
+        [_txtName.text isEqualToString:@""]) {
+        return Empty;
+    }
+    if ([_txtPassword.text isEqualToString:@""]) {
+        return Empty;
+    }
+    if ([_txtPasswordRepeat.text isEqualToString:@""]) {
+        return Empty;
+    }
+    if ([_txtSurname.text isEqualToString:@""]) {
+        return Empty;
     }
     if ([_emailTest evaluateWithObject:_txtEmail.text] == NO)
     {
         return NotCorrect;
     }
-    if ([_txtEmail.text isEqualToString:@""] ||
-        [_txtName.text isEqualToString:@""] ||
-        [_txtPassword.text isEqualToString:@""] ||
-        [_txtPasswordRepeat.text isEqualToString:@""] ||
-        [_txtSurname.text isEqualToString:@""]) {
-        return Empty;
-    }
-    if (
-        [_txtPassword.text isEqualToString:_txtPasswordRepeat.text]){
+    
+    if (_txtPassword.text != _txtPasswordRepeat.text){
         return PasswordNotMatched;
+    }
+    if (!_isTermsAgreed) {
+        return NotAgreedTerms;
     }
     return Validated;
 }
