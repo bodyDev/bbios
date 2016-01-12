@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0412C3511C44FCB900D366C6 /* Common.h in Resources */ = {isa = PBXBuildFile; fileRef = 0412C3501C44FB5A00D366C6 /* Common.h */; };
 		0412C3541C450ADA00D366C6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0412C3531C450ADA00D366C6 /* QuartzCore.framework */; };
+		0412C3571C45119400D366C6 /* BKConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0412C3561C45119400D366C6 /* BKConnectionManager.m */; };
 		04677E3E1C43D74D0088B7D9 /* BKEmailLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04677E3D1C43D74D0088B7D9 /* BKEmailLoginViewController.m */; };
 		04677E411C43D77D0088B7D9 /* BKContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04677E401C43D77D0088B7D9 /* BKContainerViewController.m */; };
 		04677E4A1C43D9A60088B7D9 /* BKRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04677E491C43D9A60088B7D9 /* BKRegisterViewController.m */; };
@@ -50,6 +51,8 @@
 /* Begin PBXFileReference section */
 		0412C3501C44FB5A00D366C6 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Common.h; path = Library/Common.h; sourceTree = "<group>"; };
 		0412C3531C450ADA00D366C6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0412C3551C45119400D366C6 /* BKConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BKConnectionManager.h; path = Library/BKConnectionManager/BKConnectionManager.h; sourceTree = "<group>"; };
+		0412C3561C45119400D366C6 /* BKConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BKConnectionManager.m; path = Library/BKConnectionManager/BKConnectionManager.m; sourceTree = "<group>"; };
 		04677E3C1C43D74D0088B7D9 /* BKEmailLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BKEmailLoginViewController.h; path = "Pages/Email Login/Controller/BKEmailLoginViewController.h"; sourceTree = "<group>"; };
 		04677E3D1C43D74D0088B7D9 /* BKEmailLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BKEmailLoginViewController.m; path = "Pages/Email Login/Controller/BKEmailLoginViewController.m"; sourceTree = "<group>"; };
 		04677E3F1C43D77D0088B7D9 /* BKContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BKContainerViewController.h; path = Pages/Container/Controller/BKContainerViewController.h; sourceTree = "<group>"; };
@@ -170,6 +173,8 @@
 		04677E421C43D8D50088B7D9 /* BKConnectionManager */ = {
 			isa = PBXGroup;
 			children = (
+				0412C3551C45119400D366C6 /* BKConnectionManager.h */,
+				0412C3561C45119400D366C6 /* BKConnectionManager.m */,
 			);
 			name = BKConnectionManager;
 			sourceTree = "<group>";
@@ -564,6 +569,7 @@
 				048CAC591C41273100C7A6A3 /* BKCache.m in Sources */,
 				048CAC5E1C41CE1C00C7A6A3 /* BKLandingViewController.m in Sources */,
 				048CAC621C41CE7000C7A6A3 /* BKInitialViewController.m in Sources */,
+				0412C3571C45119400D366C6 /* BKConnectionManager.m in Sources */,
 				04677E4A1C43D9A60088B7D9 /* BKRegisterViewController.m in Sources */,
 				048CAC181C4122A600C7A6A3 /* AppDelegate.m in Sources */,
 				04677E411C43D77D0088B7D9 /* BKContainerViewController.m in Sources */,
