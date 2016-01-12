@@ -7,8 +7,24 @@
 //
 
 #import "BKRegisterViewController.h"
+#import "Common.h"
+
+static NSString *emailRegEx = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
 
 @interface BKRegisterViewController ()
+
+/* View definitions */
+@property (weak, nonatomic) IBOutlet UITextField *txtName;
+@property (weak, nonatomic) IBOutlet UITextField *txtSurname;
+@property (weak, nonatomic) IBOutlet UITextField *txtEmail;
+@property (weak, nonatomic) IBOutlet UITextField *txtPassword;
+@property (weak, nonatomic) IBOutlet UITextField *txtPasswordRepeat;
+@property (weak, nonatomic) IBOutlet UIButton *btnAgreedTerms;
+@property (weak, nonatomic) IBOutlet UIButton *btnCompleteRegister;
+
+/* other */
+@property NSPredicate *emailTest;
+@property BOOL isTermsAgreed;
 
 @end
 
@@ -17,12 +33,69 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    // view
+    _emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegEx];
+    
+    //other
+    _isTermsAgreed = NO;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+- (IBAction)validateFormAndContinue:(id)sender {
+    
+    if ([self formValidation] == Validated) {
+        
+    }
+}
+
+#pragma mark - View
+
+- (IBAction)checkboxClicked:(id)sender {
+    
+    if (!_isTermsAgreed) {
+        _btnAgreedTerms.layer.backgroundColor = [UIColor greenColor].CGColor;
+        _isTermsAgreed = YES;
+    }
+    else{
+        _btnAgreedTerms.layer.backgroundColor = [UIColor grayColor].CGColor;
+        _isTermsAgreed = NO;
+    }
+    
+}
+
+#pragma mark Validation
+
+-(enum ValidationResult)formValidation
+{
+    if (!_isTermsAgreed) {
+        return NotAgreedTerms;
+    }
+    if ([_emailTest evaluateWithObject:_txtEmail.text] == NO)
+    {
+        return NotCorrect;
+    }
+    if ([_txtEmail.text isEqualToString:@""] ||
+        [_txtName.text isEqualToString:@""] ||
+        [_txtPassword.text isEqualToString:@""] ||
+        [_txtPasswordRepeat.text isEqualToString:@""] ||
+        [_txtSurname.text isEqualToString:@""]) {
+        return Empty;
+    }
+    if (
+        [_txtPassword.text isEqualToString:_txtPasswordRepeat.text]){
+        return PasswordNotMatched;
+    }
+    return Validated;
+}
+
+#pragma mark - UIAlerts
+
 
 /*
 #pragma mark - Navigation

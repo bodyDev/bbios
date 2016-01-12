@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0412C3511C44FCB900D366C6 /* Common.h in Resources */ = {isa = PBXBuildFile; fileRef = 0412C3501C44FB5A00D366C6 /* Common.h */; };
 		04677E3E1C43D74D0088B7D9 /* BKEmailLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04677E3D1C43D74D0088B7D9 /* BKEmailLoginViewController.m */; };
 		04677E411C43D77D0088B7D9 /* BKContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04677E401C43D77D0088B7D9 /* BKContainerViewController.m */; };
 		04677E4A1C43D9A60088B7D9 /* BKRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04677E491C43D9A60088B7D9 /* BKRegisterViewController.m */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0412C3501C44FB5A00D366C6 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Common.h; path = Library/Common.h; sourceTree = "<group>"; };
 		04677E3C1C43D74D0088B7D9 /* BKEmailLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BKEmailLoginViewController.h; path = "Pages/Email Login/Controller/BKEmailLoginViewController.h"; sourceTree = "<group>"; };
 		04677E3D1C43D74D0088B7D9 /* BKEmailLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BKEmailLoginViewController.m; path = "Pages/Email Login/Controller/BKEmailLoginViewController.m"; sourceTree = "<group>"; };
 		04677E3F1C43D77D0088B7D9 /* BKContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BKContainerViewController.h; path = Pages/Container/Controller/BKContainerViewController.h; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				048CAC1F1C4122A600C7A6A3 /* Assets.xcassets */,
 				048CAC241C4122A600C7A6A3 /* Info.plist */,
 				048CAC141C4122A600C7A6A3 /* main.m */,
+				0412C3501C44FB5A00D366C6 /* Common.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0412C3511C44FCB900D366C6 /* Common.h in Resources */,
 				048CAC231C4122A600C7A6A3 /* LaunchScreen.storyboard in Resources */,
 				048CAC201C4122A600C7A6A3 /* Assets.xcassets in Resources */,
 				048CAC1E1C4122A600C7A6A3 /* Main.storyboard in Resources */,
