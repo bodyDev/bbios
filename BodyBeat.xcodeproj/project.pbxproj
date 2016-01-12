@@ -28,6 +28,7 @@
 		048CAC5B1C41CAB400C7A6A3 /* readme.md in Sources */ = {isa = PBXBuildFile; fileRef = 048CAC5A1C41CAB400C7A6A3 /* readme.md */; };
 		048CAC5E1C41CE1C00C7A6A3 /* BKLandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 048CAC5D1C41CE1C00C7A6A3 /* BKLandingViewController.m */; };
 		048CAC621C41CE7000C7A6A3 /* BKInitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 048CAC611C41CE7000C7A6A3 /* BKInitialViewController.m */; };
+		04D5C2E51C4515B0007C9D44 /* BKHelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D5C2E41C4515B0007C9D44 /* BKHelperMethods.m */; };
 		2EEAB35405B602B24FEEE537 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0B1748A4A21CCC347DD88F /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +85,8 @@
 		048CAC5D1C41CE1C00C7A6A3 /* BKLandingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BKLandingViewController.m; path = Pages/Landing/Controller/BKLandingViewController.m; sourceTree = "<group>"; };
 		048CAC601C41CE7000C7A6A3 /* BKInitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BKInitialViewController.h; path = "Pages/Initial Navigation/BKInitialViewController.h"; sourceTree = "<group>"; };
 		048CAC611C41CE7000C7A6A3 /* BKInitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BKInitialViewController.m; path = "Pages/Initial Navigation/BKInitialViewController.m"; sourceTree = "<group>"; };
+		04D5C2E31C4515B0007C9D44 /* BKHelperMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BKHelperMethods.h; path = Library/BKHelperMethods.h; sourceTree = "<group>"; };
+		04D5C2E41C4515B0007C9D44 /* BKHelperMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BKHelperMethods.m; path = Library/BKHelperMethods.m; sourceTree = "<group>"; };
 		0C7139A341457F812E410AAE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		2C0B1748A4A21CCC347DD88F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9BC090AA28FF4389913EED4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -308,6 +311,8 @@
 			children = (
 				04677E421C43D8D50088B7D9 /* BKConnectionManager */,
 				048CAC4B1C41236900C7A6A3 /* BKCache */,
+				04D5C2E31C4515B0007C9D44 /* BKHelperMethods.h */,
+				04D5C2E41C4515B0007C9D44 /* BKHelperMethods.m */,
 			);
 			name = Library;
 			sourceTree = "<group>";
@@ -573,6 +578,7 @@
 				04677E4A1C43D9A60088B7D9 /* BKRegisterViewController.m in Sources */,
 				048CAC181C4122A600C7A6A3 /* AppDelegate.m in Sources */,
 				04677E411C43D77D0088B7D9 /* BKContainerViewController.m in Sources */,
+				04D5C2E51C4515B0007C9D44 /* BKHelperMethods.m in Sources */,
 				048CAC5B1C41CAB400C7A6A3 /* readme.md in Sources */,
 				048CAC151C4122A600C7A6A3 /* main.m in Sources */,
 			);

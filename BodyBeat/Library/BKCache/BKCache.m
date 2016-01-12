@@ -59,7 +59,7 @@
         facebookId = [[NSUserDefaults standardUserDefaults] objectForKey:@"facebookId"];
         twitterId = [[NSUserDefaults standardUserDefaults] objectForKey:@"twitterId"];
         googleplusId = [[NSUserDefaults standardUserDefaults] objectForKey:@"googleplusId"];
-        userType = [[NSUserDefaults standardUserDefaults] objectForKey:@"googleplusId"];
+        userType = [[NSUserDefaults standardUserDefaults] objectForKey:@"typeid"];
         height = [[NSUserDefaults standardUserDefaults] objectForKey:@"height"];
         weight = [[NSUserDefaults standardUserDefaults] objectForKey:@"weight"];
         bodyType = [[NSUserDefaults standardUserDefaults] objectForKey:@"bodyType"];

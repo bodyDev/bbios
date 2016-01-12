@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "BKCache.h"
+#import "BKConnectionManager.h"
 
 @interface AppDelegate ()
 
@@ -25,6 +26,10 @@
         //Create app default properties for first launch.
         [[BKCache sharedManager] setAppDefaults];
     }
+    
+    // 2. Start monitoring for connection
+    [[BKConnectionManager sharedManager] startMonitoring];
+    
     return YES;
 }
 

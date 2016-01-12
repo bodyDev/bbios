@@ -9,6 +9,8 @@
 //
 
 #import "BKConnectionManager.h"
+#import "AFNetworking.h"
+#import "Common.h"
 
 @implementation BKConnectionManager
 
@@ -26,11 +28,47 @@
 /* Required */
 - (id)init {
     if (self = [super init]) {
-
     }
+    NSLog(@"Connection Manager started");
     return self;
 }
-- (void)dealloc {
-    // Should never be called, but just here for clarity really.
+
+#pragma mark - Connection Status
+//Connection Monitoring - starts on app launch
+-(void)startMonitoring {
+    
+    //Start monitoring for connection
+    [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        NSLog(@"Current Connection Status: %@", AFStringFromNetworkReachabilityStatus(status));
+    }];
+    
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
 }
+#pragma mark - Registration
+
+//Check email available
+-(BOOL)checkEmailAvailable:(NSString *)email{
+    return YES;
+}
+
+//Register new user
+-(BOOL)registerUserWith:(NSString *)name
+                surname:(NSString *)surname
+                  email:(NSString *)email
+               password:(NSString *)password
+                   type:(NSInteger) type
+             facebookId:(NSString *)fbId
+             accessToken:(NSString *)token
+                 gender:(NSString *)gender
+               birthday:(NSString *)birthday
+             deviceInfo:(NSString *)device
+                 osInfo:(NSString *)os
+                 weight:(NSString *)weight
+                 height:(NSString *)height
+
+{
+    
+    return YES;
+}
+
 @end

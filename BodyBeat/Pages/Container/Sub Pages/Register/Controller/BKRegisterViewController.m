@@ -22,10 +22,12 @@ static NSString *emailRegEx = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}
 @property (weak, nonatomic) IBOutlet UITextField *txtPasswordRepeat;
 @property (weak, nonatomic) IBOutlet UIButton *btnAgreedTerms;
 @property (weak, nonatomic) IBOutlet UIButton *btnCompleteRegister;
+@property (weak, nonatomic) IBOutlet UIButton *btnUserIsPt;
 
 /* other */
 @property NSPredicate *emailTest;
 @property BOOL isTermsAgreed;
+@property BOOL isUserPT;
 
 @end
 
@@ -40,6 +42,7 @@ static NSString *emailRegEx = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}
     
     //other
     _isTermsAgreed = NO;
+    _isUserPT = NO;
     _btnAgreedTerms.layer.cornerRadius = 15;
 }
 
@@ -107,7 +110,6 @@ static NSString *emailRegEx = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}
     
 }
 
-#pragma mark - View
 // Checks user has agreed the terms
 - (IBAction)checkboxClicked:(id)sender {
     
@@ -120,6 +122,16 @@ static NSString *emailRegEx = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}
         _isTermsAgreed = NO;
     }
     
+}
+- (IBAction)ptClicked:(id)sender {
+    if (!_isUserPT) {
+        _btnUserIsPt.layer.backgroundColor = [UIColor greenColor].CGColor;
+        _isUserPT = YES;
+    }
+    else{
+        _btnUserIsPt.layer.backgroundColor = [UIColor grayColor].CGColor;
+        _isUserPT = NO;
+    }
 }
 
 #pragma mark Validation

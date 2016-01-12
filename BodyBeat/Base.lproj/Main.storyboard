@@ -1102,6 +1102,47 @@
                                                                     </mask>
                                                                 </variation>
                                                             </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uii-po-86W" userLabel="Legal check">
+                                                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uWi-Hq-89W">
+                                                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <state key="normal">
+                                                                            <color key="titleColor" red="0.89622790399999996" green="0.1013803796" blue="0.036137488539999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                                        </variation>
+                                                                        <connections>
+                                                                            <action selector="ptClicked:" destination="uXY-X3-jCB" eventType="touchUpInside" id="fHo-Ib-H41"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personel Trainer olarak kayıt ol" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckv-hm-gCp">
+                                                                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                                            <rect key="frame" x="38" y="0.0" width="281" height="30"/>
+                                                                        </variation>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <variation key="default">
+                                                                    <mask key="subviews">
+                                                                        <exclude reference="uWi-Hq-89W"/>
+                                                                        <exclude reference="ckv-hm-gCp"/>
+                                                                    </mask>
+                                                                </variation>
+                                                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                                    <rect key="frame" x="0.0" y="295" width="319" height="30"/>
+                                                                    <mask key="subviews">
+                                                                        <include reference="uWi-Hq-89W"/>
+                                                                        <include reference="ckv-hm-gCp"/>
+                                                                    </mask>
+                                                                </variation>
+                                                            </view>
                                                         </subviews>
                                                         <variation key="default">
                                                             <mask key="subviews">
@@ -1111,10 +1152,11 @@
                                                                 <exclude reference="iUI-Lc-bzn"/>
                                                                 <exclude reference="xcH-SF-lf0"/>
                                                                 <exclude reference="CcC-1Z-ZRa"/>
+                                                                <exclude reference="Uii-po-86W"/>
                                                             </mask>
                                                         </variation>
                                                         <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                            <rect key="frame" x="8" y="52" width="319" height="284"/>
+                                                            <rect key="frame" x="8" y="52" width="319" height="325"/>
                                                             <mask key="subviews">
                                                                 <include reference="O0J-Di-1Lr"/>
                                                                 <include reference="B86-sw-5lP"/>
@@ -1122,6 +1164,7 @@
                                                                 <include reference="iUI-Lc-bzn"/>
                                                                 <include reference="xcH-SF-lf0"/>
                                                                 <include reference="CcC-1Z-ZRa"/>
+                                                                <include reference="Uii-po-86W"/>
                                                             </mask>
                                                         </variation>
                                                     </view>
@@ -1203,6 +1246,7 @@
                     <connections>
                         <outlet property="btnAgreedTerms" destination="CGE-KX-2UM" id="iJJ-F7-x7m"/>
                         <outlet property="btnCompleteRegister" destination="wUz-Qe-vee" id="NHy-id-aqx"/>
+                        <outlet property="btnUserIsPt" destination="uWi-Hq-89W" id="k9l-w9-AAT"/>
                         <outlet property="txtEmail" destination="B86-sw-5lP" id="OBh-dv-0lQ"/>
                         <outlet property="txtName" destination="O0J-Di-1Lr" id="Aur-Q6-7PZ"/>
                         <outlet property="txtPassword" destination="iUI-Lc-bzn" id="oq9-LY-G5S"/>

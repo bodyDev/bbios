@@ -9,7 +9,19 @@
 #ifndef Common_h
 #define Common_h
 
+/* Definitions for prod/test/local server */
+#define apiVersion    @"api/v1"
+
+#define testServerUrl @""
+#define prodServerUrl @""
+#define localServerUrl @""
+
+#define emailCheck @"/checkemail"
+#define postNewUser @"/register"
+#define postLogin @"/login"
+
 /* Enums */
+
 enum ConnectionState {
     ServerUp,
     ServerDown,
@@ -22,7 +34,6 @@ enum ValidationResult {
     PasswordNotMatched,
     NotAgreedTerms
 };
-
 
 #endif /* Common_h */
 
