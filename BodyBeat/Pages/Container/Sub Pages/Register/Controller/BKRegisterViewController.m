@@ -46,16 +46,24 @@ static NSString *emailRegEx = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}
     // Dispose of any resources that can be recreated.
 }
 
-
+//Register button action
 - (IBAction)validateFormAndContinue:(id)sender {
     
-    if ([self formValidation] == Validated) {
-        
+    switch ([self formValidation]) {
+        case Validated:
+            
+            break;
+        case NotAgreedTerms:
+            
+            break;
+        default:
+            break;
     }
+    
 }
 
 #pragma mark - View
-
+// Checks user has agreed the terms
 - (IBAction)checkboxClicked:(id)sender {
     
     if (!_isTermsAgreed) {
@@ -70,7 +78,7 @@ static NSString *emailRegEx = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}
 }
 
 #pragma mark Validation
-
+// simple validation for form textboxes
 -(enum ValidationResult)formValidation
 {
     if (!_isTermsAgreed) {
@@ -95,7 +103,9 @@ static NSString *emailRegEx = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}
 }
 
 #pragma mark - UIAlerts
-
+-(void)generateUIAlerts {
+    
+}
 
 /*
 #pragma mark - Navigation

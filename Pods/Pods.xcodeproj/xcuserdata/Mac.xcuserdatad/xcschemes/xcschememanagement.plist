@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-BodyBeat.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-BodyBeatTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-BodyBeatUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SIAlertView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>1D1FE2146966153B990BD5FF7AB879BD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7433FD425D95AB7A3C2EA73F0162086D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B1B92CB1B560F9EEAEB686B90A497268</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E38CF0461DA8786F1F3C1BE69E9C81D5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E716172643E9F4A47C31575D1B927B17</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
