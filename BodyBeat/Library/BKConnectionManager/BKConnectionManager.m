@@ -70,9 +70,6 @@
                language:(NSString *)language
 
 {
-
-    NSURL *baseUrl = [NSURL URLWithString:[self generateUrlByRequest:Register]];
-    
     NSDictionary *params = @{
                              @"name": name,
                              @"surname": surname,
@@ -99,17 +96,13 @@
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
+        //TODO
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
+        //TODO
+        
     }];
-    
-   
-    
-
-//googleplusid:req.body.googleplusid,
-//twitterid:req.body.twitterid,
-
-
     return YES;
 }
 

@@ -82,6 +82,9 @@
                                         <include reference="MhY-rz-o5S"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="loginWithFacebook:" destination="Oq8-Ra-zto" eventType="touchUpInside" id="hBE-Lr-haN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lf-0X-iDj">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -197,6 +200,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="7sD-7X-UBm"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="btnFacebookLogin" destination="hxK-Db-pWq" id="PKJ-wM-nVv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eGS-gl-eGK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -946,11 +952,11 @@
                                         <exclude reference="73V-sj-6gX"/>
                                         <exclude reference="Yty-TG-1dW"/>
                                         <exclude reference="szT-fc-BVK"/>
-                                        <exclude reference="LdH-P9-1wC"/>
-                                        <exclude reference="oY7-zh-VGm"/>
                                         <exclude reference="Bsw-xs-63q"/>
                                         <exclude reference="R6M-tB-bh9"/>
                                         <exclude reference="SF9-jj-Zjp"/>
+                                        <exclude reference="LdH-P9-1wC"/>
+                                        <exclude reference="oY7-zh-VGm"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
@@ -964,11 +970,11 @@
                                         <include reference="73V-sj-6gX"/>
                                         <include reference="Yty-TG-1dW"/>
                                         <include reference="szT-fc-BVK"/>
-                                        <include reference="LdH-P9-1wC"/>
-                                        <include reference="oY7-zh-VGm"/>
                                         <include reference="Bsw-xs-63q"/>
                                         <include reference="R6M-tB-bh9"/>
                                         <include reference="SF9-jj-Zjp"/>
+                                        <include reference="LdH-P9-1wC"/>
+                                        <include reference="oY7-zh-VGm"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -976,7 +982,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" red="0.38431372549999998" green="0.16078431369999999" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <segue destination="uXY-X3-jCB" kind="embed" id="3IJ-ul-Chq"/>
+                                    <segue destination="CJb-2n-why" kind="embed" id="zhV-pt-395"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -1035,6 +1041,19 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h3e-hq-mgm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="419.25" y="439.125"/>
+        </scene>
+        <!--Container Navigator View Controller-->
+        <scene sceneID="wXc-qR-H2g">
+            <objects>
+                <viewController id="CJb-2n-why" customClass="BKContainerNavigatorViewController" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="uXY-X3-jCB" kind="custom" identifier="userDetailsSegue" id="FFz-au-6B8"/>
+                        <segue destination="NXy-TX-SAi" kind="custom" identifier="userHeWeSegue" id="qDs-lo-WSz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AY1-kf-X4a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1058.25" y="439.5"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="Zzu-kC-fYy">
@@ -1320,7 +1339,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DsH-Xb-9Xp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="419.25" y="1056"/>
+            <point key="canvasLocation" x="690.75" y="1027.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Fgw-e5-6cp">
+            <objects>
+                <viewController id="NXy-TX-SAi" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7kv-Kd-Fc1"/>
+                        <viewControllerLayoutGuide type="bottom" id="76U-WO-t0S"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oFf-tC-3Sr">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oib-pQ-0DS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1315.5" y="1101.75"/>
         </scene>
     </scenes>
 </document>

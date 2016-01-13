@@ -1,14 +1,14 @@
 //
-//  BKContainerViewController.h
+//  BKContainerNavigatorViewController.h
 //  BodyBeat
 //
-//  Created by Can Behran Kankul on 11/01/16.
+//  Created by Can Behran Kankul on 13/01/16.
 //  Copyright © 2016 Can Behran Kankul. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface BKContainerViewController : UIViewController
+@interface BKContainerNavigatorViewController : UIViewController
 
 @property BOOL isUserLoggedWithFacebook;
 

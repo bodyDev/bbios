@@ -20,6 +20,10 @@
 #define postNewUserUrl @"register"
 #define postLoginUrl @"login"
 
+/* Segue Identifiers */
+#define userDetailsSegue @"userDetailsSegue"
+#define userHeightWeightSegue @"userHeWeSegue"
+
 /* Enums */
 
 enum ConnectionState {

@@ -13,6 +13,7 @@
 		04677E3E1C43D74D0088B7D9 /* BKEmailLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04677E3D1C43D74D0088B7D9 /* BKEmailLoginViewController.m */; };
 		04677E411C43D77D0088B7D9 /* BKContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04677E401C43D77D0088B7D9 /* BKContainerViewController.m */; };
 		04677E4A1C43D9A60088B7D9 /* BKRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04677E491C43D9A60088B7D9 /* BKRegisterViewController.m */; };
+		046D95EC1C468977001C9F13 /* BKContainerNavigatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046D95EB1C468977001C9F13 /* BKContainerNavigatorViewController.m */; };
 		048CAC151C4122A600C7A6A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 048CAC141C4122A600C7A6A3 /* main.m */; };
 		048CAC181C4122A600C7A6A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 048CAC171C4122A600C7A6A3 /* AppDelegate.m */; };
 		048CAC1E1C4122A600C7A6A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048CAC1C1C4122A600C7A6A3 /* Main.storyboard */; };
@@ -60,6 +61,8 @@
 		04677E401C43D77D0088B7D9 /* BKContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BKContainerViewController.m; path = Pages/Container/Controller/BKContainerViewController.m; sourceTree = "<group>"; };
 		04677E481C43D9A60088B7D9 /* BKRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BKRegisterViewController.h; path = "Pages/Container/Sub Pages/Register/Controller/BKRegisterViewController.h"; sourceTree = "<group>"; };
 		04677E491C43D9A60088B7D9 /* BKRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BKRegisterViewController.m; path = "Pages/Container/Sub Pages/Register/Controller/BKRegisterViewController.m"; sourceTree = "<group>"; };
+		046D95EA1C468977001C9F13 /* BKContainerNavigatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BKContainerNavigatorViewController.h; path = Pages/Container/Controller/BKContainerNavigatorViewController.h; sourceTree = "<group>"; };
+		046D95EB1C468977001C9F13 /* BKContainerNavigatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BKContainerNavigatorViewController.m; path = Pages/Container/Controller/BKContainerNavigatorViewController.m; sourceTree = "<group>"; };
 		048CAC101C4122A600C7A6A3 /* BodyBeat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BodyBeat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		048CAC141C4122A600C7A6A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		048CAC161C4122A600C7A6A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -162,6 +165,8 @@
 			children = (
 				04677E3F1C43D77D0088B7D9 /* BKContainerViewController.h */,
 				04677E401C43D77D0088B7D9 /* BKContainerViewController.m */,
+				046D95EA1C468977001C9F13 /* BKContainerNavigatorViewController.h */,
+				046D95EB1C468977001C9F13 /* BKContainerNavigatorViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -579,6 +584,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04677E3E1C43D74D0088B7D9 /* BKEmailLoginViewController.m in Sources */,
+				046D95EC1C468977001C9F13 /* BKContainerNavigatorViewController.m in Sources */,
 				048CAC591C41273100C7A6A3 /* BKCache.m in Sources */,
 				048CAC5E1C41CE1C00C7A6A3 /* BKLandingViewController.m in Sources */,
 				048CAC621C41CE7000C7A6A3 /* BKInitialViewController.m in Sources */,
