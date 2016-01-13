@@ -21,15 +21,18 @@
 
 -(BOOL)registerUserWith:(NSString *)name
                 surname:(NSString *)surname
+               fullname:(NSString *)fullname
                   email:(NSString *)email
                password:(NSString *)password
-                   type:(NSInteger) type
-             facebookId:(NSString *)fbId
-            accessToken:(NSString *)token
+                   type:(NSString *) typeId
+             facebookId:(NSString *)facebookId
+            accessToken:(NSString *)accesstoken
                  gender:(NSString *)gender
                birthday:(NSString *)birthday
              deviceInfo:(NSString *)device
-                 osInfo:(NSString *)os
+                 osInfo:(NSString *)osInfo
+               bodyType:(NSString *)bodyType
                  weight:(NSString *)weight
-                 height:(NSString *)height;
+                 height:(NSString *)height
+               language:(NSString *)language;
 @end

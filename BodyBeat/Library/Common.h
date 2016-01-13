@@ -14,11 +14,11 @@
 
 #define testServerUrl @""
 #define prodServerUrl @""
-#define localServerUrl @""
+#define localServerUrl @"http://localhost:3000"
 
-#define emailCheck @"/checkemail"
-#define postNewUser @"/register"
-#define postLogin @"/login"
+#define emailCheckUrl @"checkemail"
+#define postNewUserUrl @"register"
+#define postLoginUrl @"login"
 
 /* Enums */
 
@@ -33,6 +33,12 @@ enum ValidationResult {
     NotCorrect,
     PasswordNotMatched,
     NotAgreedTerms
+};
+
+enum UrlType {
+    Login,
+    Register,
+    EmailCheck
 };
 
 #endif /* Common_h */

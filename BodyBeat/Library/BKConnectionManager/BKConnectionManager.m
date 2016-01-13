@@ -54,21 +54,86 @@
 //Register new user
 -(BOOL)registerUserWith:(NSString *)name
                 surname:(NSString *)surname
+               fullname:(NSString *)fullname
                   email:(NSString *)email
                password:(NSString *)password
-                   type:(NSInteger) type
-             facebookId:(NSString *)fbId
-             accessToken:(NSString *)token
+                   type:(NSString *) typeId
+             facebookId:(NSString *)facebookId
+            accessToken:(NSString *)accesstoken
                  gender:(NSString *)gender
                birthday:(NSString *)birthday
              deviceInfo:(NSString *)device
-                 osInfo:(NSString *)os
+                 osInfo:(NSString *)osInfo
+               bodyType:(NSString *)bodyType
                  weight:(NSString *)weight
                  height:(NSString *)height
+               language:(NSString *)language
 
 {
+
+    NSURL *baseUrl = [NSURL URLWithString:[self generateUrlByRequest:Register]];
     
+    NSDictionary *params = @{
+                             @"name": name,
+                             @"surname": surname,
+                             @"fullname": fullname,
+                             @"email": email,
+                             @"password": password,
+                             @"typeid": typeId,
+                             @"facebookId": facebookId,
+                             @"googleplusid":@"",
+                             @"twitterid":@"",
+                             @"accesstoken": accesstoken,
+                             @"gender": gender,
+                             @"birthday": birthday,
+                             @"device": device,
+                             @"osInfo": osInfo,
+                             @"bodyType": bodyType,
+                             @"weight": weight,
+                             @"height": height,
+                             @"language": language
+                            };
+    
+    
+    [[AFHTTPSessionManager manager] POST:[self generateUrlByRequest:Register] parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
+    
+   
+    
+
+//googleplusid:req.body.googleplusid,
+//twitterid:req.body.twitterid,
+
+
     return YES;
+}
+
+-(NSString *)generateUrlByRequest:(enum UrlType)requestType{
+    
+    /* Switch this to connect different server */
+    
+    NSString *serverAddress = localServerUrl;
+    
+    switch (requestType)
+    {
+        case EmailCheck:
+            return [NSString stringWithFormat:@"%@/%@/%@", serverAddress, apiVersion, emailCheckUrl];
+            break;
+        case Register:
+            return [NSString stringWithFormat:@"%@/%@/%@", serverAddress, apiVersion, postNewUserUrl];
+        break;
+        case Login:
+            return [NSString stringWithFormat:@"%@/%@/%@", serverAddress, apiVersion, postLoginUrl];
+            break;
+        default:
+        break;
+    }
+    
 }
 
 @end

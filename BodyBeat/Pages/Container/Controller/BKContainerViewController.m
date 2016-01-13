@@ -12,6 +12,8 @@
 
 /* View definitions */
 @property (weak, nonatomic) IBOutlet UIView *viewContainer;
+@property (weak, nonatomic) IBOutlet UIButton *btnBackward;
+@property (weak, nonatomic) IBOutlet UIButton *btnForward;
 
 @end
 

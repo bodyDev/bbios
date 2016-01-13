@@ -8,7 +8,9 @@
 
 #import "BKRegisterViewController.h"
 #import "Common.h"
+#import "BKConnectionManager.h"
 #import "SIAlertView.h"
+#import <UIKit/UIKit.h>
 
 static NSString *emailRegEx = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
 
@@ -68,7 +70,22 @@ static NSString *emailRegEx = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}
     switch ([self formValidation]) {
         case Validated:
             
-            //form validated
+            [[BKConnectionManager sharedManager] registerUserWith:@"behran"
+                                                          surname:@"kankul"
+                                                         fullname:@"behran kankul"
+                                                            email:@"behrank@gmail.com"
+                                                         password:@"123456"
+                                                             type:@"1"
+                                                       facebookId:@"123123"
+                                                      accessToken:@"12312"
+                                                           gender:@"male"
+                                                         birthday:@"03/29/1982"
+                                                       deviceInfo:[[UIDevice currentDevice] model]
+                                                           osInfo:[[UIDevice currentDevice] systemVersion]
+                                                         bodyType:@"thin"
+                                                           weight:@"76"
+                                                           height:@"180"
+                                                         language:@"tr"];
             
             break;
             
@@ -159,8 +176,10 @@ static NSString *emailRegEx = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}
     {
         return NotCorrect;
     }
+    NSString *txt1 = _txtPassword.text;
+    NSString *txt2 = _txtPasswordRepeat.text;
     
-    if (_txtPassword.text != _txtPasswordRepeat.text){
+    if (![txt1 isEqualToString:txt2]){
         return PasswordNotMatched;
     }
     if (!_isTermsAgreed) {
