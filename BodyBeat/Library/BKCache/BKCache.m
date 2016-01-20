@@ -34,6 +34,7 @@
 @synthesize isUserConnectedWithGoogle;
 @synthesize isUserConnectedWithTwitter;
 @synthesize isAppInstalled;
+
 #pragma mark Singleton Methods
 
 /* Required */
@@ -45,24 +46,28 @@
     });
     return sharedCache;
 }
+
 /* Required */
 - (id)init {
     if (self = [super init]) {
-        appUserId = [[NSUserDefaults standardUserDefaults] objectForKey:@"appUserId"];
-        name = [[NSUserDefaults standardUserDefaults] objectForKey:@"name"];
-        surname = [[NSUserDefaults standardUserDefaults] objectForKey:@"surname"];
-        fullname = [[NSUserDefaults standardUserDefaults] objectForKey:@"fullname"];
-        gender = [[NSUserDefaults standardUserDefaults] objectForKey:@"gender"];
-        birthday = [[NSUserDefaults standardUserDefaults] objectForKey:@"birthday"];
-        email = [[NSUserDefaults standardUserDefaults] objectForKey:@"email"];
-        password = [[NSUserDefaults standardUserDefaults] objectForKey:@"password"];
-        facebookId = [[NSUserDefaults standardUserDefaults] objectForKey:@"facebookId"];
-        twitterId = [[NSUserDefaults standardUserDefaults] objectForKey:@"twitterId"];
-        googleplusId = [[NSUserDefaults standardUserDefaults] objectForKey:@"googleplusId"];
-        userType = [[NSUserDefaults standardUserDefaults] objectForKey:@"typeid"];
-        height = [[NSUserDefaults standardUserDefaults] objectForKey:@"height"];
-        weight = [[NSUserDefaults standardUserDefaults] objectForKey:@"weight"];
-        bodyType = [[NSUserDefaults standardUserDefaults] objectForKey:@"bodyType"];
+        
+        /* read userInfo for fast access. */
+        
+        appUserId = [[NSUserDefaults standardUserDefaults] objectForKey:applicationUserIdKey];
+        name = [[NSUserDefaults standardUserDefaults] objectForKey:userNameKey];
+        surname = [[NSUserDefaults standardUserDefaults] objectForKey:userSurnameKey];
+        fullname = [[NSUserDefaults standardUserDefaults] objectForKey:userFullnameKey];
+        gender = [[NSUserDefaults standardUserDefaults] objectForKey:userGenderKey];
+        birthday = [[NSUserDefaults standardUserDefaults] objectForKey:userBirthdayKey];
+        email = [[NSUserDefaults standardUserDefaults] objectForKey:userEmailKey];
+        password = [[NSUserDefaults standardUserDefaults] objectForKey:userPasswordKey];
+        facebookId = [[NSUserDefaults standardUserDefaults] objectForKey:userFBIDKey];
+        twitterId = [[NSUserDefaults standardUserDefaults] objectForKey:userTWIDKey];
+        googleplusId = [[NSUserDefaults standardUserDefaults] objectForKey:userGGLIDKey];
+        userType = [[NSUserDefaults standardUserDefaults] objectForKey:userTypeKey];
+        height = [[NSUserDefaults standardUserDefaults] objectForKey:userHeightKey];
+        weight = [[NSUserDefaults standardUserDefaults] objectForKey:userWeightKey];
+        bodyType = [[NSUserDefaults standardUserDefaults] objectForKey:userBodyTypeKey];
         
         //TODO:Add bool controls
     }
@@ -70,36 +75,46 @@
 }
 
 /* Sub methods */
-- (void) setAppDefaults {
+- (void) saveUserData:(NSDictionary *)userData :(BOOL) isFirstTime {
     
-    //this method only works on first install.
-    [[NSUserDefaults standardUserDefaults] setObject:@"0000" forKey:@"appUserId"];
-    [[NSUserDefaults standardUserDefaults] setObject:@"name" forKey:@"name"];
-    [[NSUserDefaults standardUserDefaults] setObject:@"surname" forKey:@"surname"];
-    [[NSUserDefaults standardUserDefaults] setObject:@"fullname" forKey:@"fullname"];
-    [[NSUserDefaults standardUserDefaults] setObject:@"gender" forKey:@"gender"];
-    [[NSUserDefaults standardUserDefaults] setObject:@"birthday" forKey:@"birthday"];
-    [[NSUserDefaults standardUserDefaults] setObject:@"email" forKey:@"email"];
-    [[NSUserDefaults standardUserDefaults] setObject:@"password" forKey:@"password"];
-    [[NSUserDefaults standardUserDefaults] setObject:@"facebookId" forKey:@"facebookId"];
-    [[NSUserDefaults standardUserDefaults] setObject:@"twitterId" forKey:@"twitterId"];
-    [[NSUserDefaults standardUserDefaults] setObject:@"googleplusId" forKey:@"googleplusId"];
-    [[NSUserDefaults standardUserDefaults] setObject:@"userType" forKey:@"userType"];
-    [[NSUserDefaults standardUserDefaults] setObject:@"height" forKey:@"height"];
-    [[NSUserDefaults standardUserDefaults] setObject:@"weight" forKey:@"v"];
-    [[NSUserDefaults standardUserDefaults] setObject:@"bodyType" forKey:@"bodyType"];
-
-    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isUserConnectedWithFacebook"];
-    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isUserConnectedWithEmail"];
-    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isUserConnectedWithGoogle"];
-    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isUserConnectedWithTwitter"];
-    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isUserConnectedWithTwitter"];
-    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"isAppInstalled"];
+    /* this condition works only on first launch of app */
+    if (isFirstTime) {
+        userData = @{
+                     applicationUserIdKey:@"0000",
+                     userNameKey:@"name",
+                     userSurnameKey:@"surname",
+                     userFullnameKey:@"fullname",
+                     userGenderKey:@"gender",
+                     userBirthdayKey:@"birthday",
+                     userEmailKey:@"email",
+                     userPasswordKey:@"password",
+                     userFBIDKey:@"facebookId",
+                     userTWIDKey:@"twitterId",
+                     userGGLIDKey:@"googleplusId",
+                     userTypeKey:@"userType",
+                     userHeightKey:@"height",
+                     userWeightKey:@"weight",
+                     userBodyTypeKey:@"bodyType",
+                     userConnectedFBKey:@NO,
+                     userConnectedGGLKey:@NO,
+                     userConnectedTWKey:@NO,
+                     userConnectedEmailKey:@NO,
+                     };
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"isAppInstalled"];
+    }
+    else
+    {
+        /* This part checks if a key has a value or not and sets value for key. */
+        
+        for (NSString *key in userData) {
+            [[NSUserDefaults standardUserDefaults] setObject:userData[key] forKey:key];
+        }
+    }
+    
 }
 - (void) updateAppData:(NSString *)key withData:(NSObject*)data {
     
     [[NSUserDefaults standardUserDefaults] setObject:data forKey:key];
-    
 }
 /* this method only required for first time launch */
 - (BOOL) checkAppInstalled {

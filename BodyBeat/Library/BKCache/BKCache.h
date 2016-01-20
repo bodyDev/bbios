@@ -8,6 +8,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Common.h"
 
 @interface BKCache : NSObject {
     
@@ -57,7 +58,7 @@
 @property BOOL isAppInstalled;
 
 + (id)sharedManager;
-- (void) setAppDefaults;
+- (void) saveUserData:(NSDictionary *)userData :(BOOL) isFirstTime;
 - (void) updateAppData:(NSString *)key withData:(NSObject*)data;
 - (BOOL) checkAppInstalled;
 @end

@@ -11,6 +11,7 @@
 #import "BKConnectionManager.h"
 #import "SIAlertView.h"
 #import <UIKit/UIKit.h>
+#import "BKCache.h"
 
 static NSString *emailRegEx = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
 
@@ -193,6 +194,38 @@ static NSString *emailRegEx = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}
     
 }
 
+#pragma mark - Collect user info
+-(NSDictionary *) prepareRegisterData
+{
+    NSDictionary *params =  @{ userNameKey:_txtName.text,
+                               userSurnameKey:_txtSurname.text,
+                               userFullnameKey:[NSString stringWithFormat:@"%@ %@",_txtName.text,_txtSurname.text],
+                               userEmailKey:_txtEmail.text,
+                               userPasswordKey:_txtPassword.text,
+                               userTypeKey:_isUserPT ? @"2" : @"1",
+                               userFBIDKey:[[BKCache sharedManager] facebookId],
+                               
+                             };
+    
+    
+    [[BKConnectionManager sharedManager] registerUserWith:@"behran"
+                                                  surname:@"kankul"
+                                                 fullname:@"behran kankul"
+                                                    email:@"behrank@gmail.com"
+                                                 password:@"123456"
+                                                     type:@"1"
+                                               facebookId:@"123123"
+                                              accessToken:@"12312"
+                                                   gender:@"male"
+                                                 birthday:@"03/29/1982"
+                                               deviceInfo:[[UIDevice currentDevice] model]
+                                                   osInfo:[[UIDevice currentDevice] systemVersion]
+                                                 bodyType:@"thin"
+                                                   weight:@"76"
+                                                   height:@"180"
+                                                 language:@"tr"];
+    return params;
+}
 /*
 #pragma mark - Navigation
 

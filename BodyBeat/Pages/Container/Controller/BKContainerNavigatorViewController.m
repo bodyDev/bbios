@@ -2,11 +2,21 @@
 //  BKContainerNavigatorViewController.m
 //  BodyBeat
 //
+//  This controller handles view navigation before-after registration process.
+//
+//
+//
+//
 //  Created by Can Behran Kankul on 13/01/16.
 //  Copyright © 2016 Can Behran Kankul. All rights reserved.
 //
 
 #import "BKContainerNavigatorViewController.h"
+
+/* Segue Controllers */
+#import "BKRegisterViewController.h"
+
+
 @interface BKContainerNavigatorViewController()
 
 @end
@@ -16,7 +26,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    // [self.viewContainer layoutIfNeeded];
+
+    //TODO:Container swicth
+    
 }
 
 - (void)didReceiveMemoryWarning {

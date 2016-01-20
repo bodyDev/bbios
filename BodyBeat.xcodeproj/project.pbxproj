@@ -14,6 +14,8 @@
 		04677E411C43D77D0088B7D9 /* BKContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04677E401C43D77D0088B7D9 /* BKContainerViewController.m */; };
 		04677E4A1C43D9A60088B7D9 /* BKRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04677E491C43D9A60088B7D9 /* BKRegisterViewController.m */; };
 		046D95EC1C468977001C9F13 /* BKContainerNavigatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046D95EB1C468977001C9F13 /* BKContainerNavigatorViewController.m */; };
+		0489D9851C4BB9FD00393884 /* BKPersonalInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0489D9841C4BB9FD00393884 /* BKPersonalInfoViewController.m */; };
+		0489D9881C4BBA3100393884 /* BKPersonalTrainingInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0489D9871C4BBA3100393884 /* BKPersonalTrainingInfoViewController.m */; };
 		048CAC151C4122A600C7A6A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 048CAC141C4122A600C7A6A3 /* main.m */; };
 		048CAC181C4122A600C7A6A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 048CAC171C4122A600C7A6A3 /* AppDelegate.m */; };
 		048CAC1E1C4122A600C7A6A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048CAC1C1C4122A600C7A6A3 /* Main.storyboard */; };
@@ -29,7 +31,6 @@
 		048CAC5B1C41CAB400C7A6A3 /* readme.md in Sources */ = {isa = PBXBuildFile; fileRef = 048CAC5A1C41CAB400C7A6A3 /* readme.md */; };
 		048CAC5E1C41CE1C00C7A6A3 /* BKLandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 048CAC5D1C41CE1C00C7A6A3 /* BKLandingViewController.m */; };
 		048CAC621C41CE7000C7A6A3 /* BKInitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 048CAC611C41CE7000C7A6A3 /* BKInitialViewController.m */; };
-		04D5C2E51C4515B0007C9D44 /* BKHelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D5C2E41C4515B0007C9D44 /* BKHelperMethods.m */; };
 		2EEAB35405B602B24FEEE537 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0B1748A4A21CCC347DD88F /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,10 @@
 		04677E491C43D9A60088B7D9 /* BKRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BKRegisterViewController.m; path = "Pages/Container/Sub Pages/Register/Controller/BKRegisterViewController.m"; sourceTree = "<group>"; };
 		046D95EA1C468977001C9F13 /* BKContainerNavigatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BKContainerNavigatorViewController.h; path = Pages/Container/Controller/BKContainerNavigatorViewController.h; sourceTree = "<group>"; };
 		046D95EB1C468977001C9F13 /* BKContainerNavigatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BKContainerNavigatorViewController.m; path = Pages/Container/Controller/BKContainerNavigatorViewController.m; sourceTree = "<group>"; };
+		0489D9831C4BB9FD00393884 /* BKPersonalInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BKPersonalInfoViewController.h; path = "Pages/Container/Sub Pages/Register Personel Info/BKPersonalInfoViewController.h"; sourceTree = "<group>"; };
+		0489D9841C4BB9FD00393884 /* BKPersonalInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BKPersonalInfoViewController.m; path = "Pages/Container/Sub Pages/Register Personel Info/BKPersonalInfoViewController.m"; sourceTree = "<group>"; };
+		0489D9861C4BBA3100393884 /* BKPersonalTrainingInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BKPersonalTrainingInfoViewController.h; path = "Pages/Container/Sub Pages/Register Personel Info/BKPersonalTrainingInfoViewController.h"; sourceTree = "<group>"; };
+		0489D9871C4BBA3100393884 /* BKPersonalTrainingInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BKPersonalTrainingInfoViewController.m; path = "Pages/Container/Sub Pages/Register Personel Info/BKPersonalTrainingInfoViewController.m"; sourceTree = "<group>"; };
 		048CAC101C4122A600C7A6A3 /* BodyBeat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BodyBeat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		048CAC141C4122A600C7A6A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		048CAC161C4122A600C7A6A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -88,8 +93,6 @@
 		048CAC5D1C41CE1C00C7A6A3 /* BKLandingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BKLandingViewController.m; path = Pages/Landing/Controller/BKLandingViewController.m; sourceTree = "<group>"; };
 		048CAC601C41CE7000C7A6A3 /* BKInitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BKInitialViewController.h; path = "Pages/Initial Navigation/BKInitialViewController.h"; sourceTree = "<group>"; };
 		048CAC611C41CE7000C7A6A3 /* BKInitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BKInitialViewController.m; path = "Pages/Initial Navigation/BKInitialViewController.m"; sourceTree = "<group>"; };
-		04D5C2E31C4515B0007C9D44 /* BKHelperMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BKHelperMethods.h; path = Library/BKHelperMethods.h; sourceTree = "<group>"; };
-		04D5C2E41C4515B0007C9D44 /* BKHelperMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BKHelperMethods.m; path = Library/BKHelperMethods.m; sourceTree = "<group>"; };
 		0C7139A341457F812E410AAE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		2C0B1748A4A21CCC347DD88F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9BC090AA28FF4389913EED4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -190,6 +193,7 @@
 		04677E441C43D9570088B7D9 /* Sub Pages */ = {
 			isa = PBXGroup;
 			children = (
+				0489D9821C4BB9BA00393884 /* Register Personal Info */,
 				04677E451C43D9770088B7D9 /* Register */,
 			);
 			name = "Sub Pages";
@@ -218,6 +222,17 @@
 			children = (
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		0489D9821C4BB9BA00393884 /* Register Personal Info */ = {
+			isa = PBXGroup;
+			children = (
+				0489D9831C4BB9FD00393884 /* BKPersonalInfoViewController.h */,
+				0489D9841C4BB9FD00393884 /* BKPersonalInfoViewController.m */,
+				0489D9861C4BBA3100393884 /* BKPersonalTrainingInfoViewController.h */,
+				0489D9871C4BBA3100393884 /* BKPersonalTrainingInfoViewController.m */,
+			);
+			name = "Register Personal Info";
 			sourceTree = "<group>";
 		};
 		048CAC071C4122A600C7A6A3 = {
@@ -317,8 +332,6 @@
 				04677E421C43D8D50088B7D9 /* BKConnectionManager */,
 				048CAC4B1C41236900C7A6A3 /* BKCache */,
 				04D5C2E61C4533F2007C9D44 /* Realm */,
-				04D5C2E31C4515B0007C9D44 /* BKHelperMethods.h */,
-				04D5C2E41C4515B0007C9D44 /* BKHelperMethods.m */,
 			);
 			name = Library;
 			sourceTree = "<group>";
@@ -585,6 +598,7 @@
 			files = (
 				04677E3E1C43D74D0088B7D9 /* BKEmailLoginViewController.m in Sources */,
 				046D95EC1C468977001C9F13 /* BKContainerNavigatorViewController.m in Sources */,
+				0489D9851C4BB9FD00393884 /* BKPersonalInfoViewController.m in Sources */,
 				048CAC591C41273100C7A6A3 /* BKCache.m in Sources */,
 				048CAC5E1C41CE1C00C7A6A3 /* BKLandingViewController.m in Sources */,
 				048CAC621C41CE7000C7A6A3 /* BKInitialViewController.m in Sources */,
@@ -592,9 +606,9 @@
 				04677E4A1C43D9A60088B7D9 /* BKRegisterViewController.m in Sources */,
 				048CAC181C4122A600C7A6A3 /* AppDelegate.m in Sources */,
 				04677E411C43D77D0088B7D9 /* BKContainerViewController.m in Sources */,
-				04D5C2E51C4515B0007C9D44 /* BKHelperMethods.m in Sources */,
 				048CAC5B1C41CAB400C7A6A3 /* readme.md in Sources */,
 				048CAC151C4122A600C7A6A3 /* main.m in Sources */,
+				0489D9881C4BBA3100393884 /* BKPersonalTrainingInfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

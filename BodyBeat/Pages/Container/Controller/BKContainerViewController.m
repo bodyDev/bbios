@@ -14,12 +14,10 @@
 @property (weak, nonatomic) IBOutlet UIView *viewContainer;
 @property (weak, nonatomic) IBOutlet UIButton *btnBackward;
 @property (weak, nonatomic) IBOutlet UIButton *btnForward;
-
+@property NSInteger *containerIndex;
 @end
 
 @implementation BKContainerViewController
-
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,14 +30,13 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)navigationButtonsClicked:(id)sender {
+    
+    if ([[sender text]  isEqual: @">"]) {
+        
+    }
+    
 }
-*/
+
 
 @end

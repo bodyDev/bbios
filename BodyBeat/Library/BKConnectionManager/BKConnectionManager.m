@@ -11,7 +11,17 @@
 #import "BKConnectionManager.h"
 #import "AFNetworking.h"
 #import "Common.h"
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import "BKCache.h"
+#import <UIKit/UIKit.h>
 
+
+@interface BKConnectionManager()
+
+@property NSDictionary *facebookParams;
+
+@end
 @implementation BKConnectionManager
 
 #pragma mark Singleton Methods
@@ -29,6 +39,8 @@
 - (id)init {
     if (self = [super init]) {
     }
+    //Default permissions for facebook graph api
+    _facebookParams = @{@"fields" : @"id,name,email,birthday,gender,first_name,last_name"};
     NSLog(@"Connection Manager started");
     return self;
 }
@@ -52,47 +64,9 @@
 }
 
 //Register new user
--(BOOL)registerUserWith:(NSString *)name
-                surname:(NSString *)surname
-               fullname:(NSString *)fullname
-                  email:(NSString *)email
-               password:(NSString *)password
-                   type:(NSString *) typeId
-             facebookId:(NSString *)facebookId
-            accessToken:(NSString *)accesstoken
-                 gender:(NSString *)gender
-               birthday:(NSString *)birthday
-             deviceInfo:(NSString *)device
-                 osInfo:(NSString *)osInfo
-               bodyType:(NSString *)bodyType
-                 weight:(NSString *)weight
-                 height:(NSString *)height
-               language:(NSString *)language
-
+-(BOOL)registerUserWith:(NSDictionary *) parameters
 {
-    NSDictionary *params = @{
-                             @"name": name,
-                             @"surname": surname,
-                             @"fullname": fullname,
-                             @"email": email,
-                             @"password": password,
-                             @"typeid": typeId,
-                             @"facebookId": facebookId,
-                             @"googleplusid":@"",
-                             @"twitterid":@"",
-                             @"accesstoken": accesstoken,
-                             @"gender": gender,
-                             @"birthday": birthday,
-                             @"device": device,
-                             @"osInfo": osInfo,
-                             @"bodyType": bodyType,
-                             @"weight": weight,
-                             @"height": height,
-                             @"language": language
-                            };
-    
-    
-    [[AFHTTPSessionManager manager] POST:[self generateUrlByRequest:Register] parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {
+    [[AFHTTPSessionManager manager] POST:[self generateUrlByRequest:Register] parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
@@ -127,6 +101,36 @@
         break;
     }
     
+}
+
+-(void) connectFacebooktoGetUserInfo{
+    
+    //Make a FBGraph request to get user information
+    
+    [[[FBSDKGraphRequest alloc] initWithGraphPath:@"me" parameters:_facebookParams HTTPMethod:@"GET"] startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
+        
+        if (!error) {
+        
+            //TODO:
+        }
+        else{
+            NSDictionary *userData = @{userFBIDKey:result[@"id"],
+                                       userEmailKey:result[@"email"],
+                                       userNameKey:result[@"first_name"],
+                                       userSurnameKey:result[@"last_name"],
+                                       userFullnameKey:[NSString stringWithFormat:@"%@ %@",result[@"first_name"],result[@"last_name"]],
+                                       userGenderKey:result[@"gender"],
+                                       userFBTokenKey:@"",
+                                       userBirthdayKey:result[@"birthday"],
+                                       userDevice:[[UIDevice currentDevice] model],
+                                       userOsInfo:[[UIDevice currentDevice] systemVersion],
+                                       userConnectedFBKey:@YES
+                                       };
+            //now we have user info. Lets save them.
+            [[BKCache sharedManager] saveUserData:userData :NO];
+        }
+        
+    }];
 }
 
 @end
