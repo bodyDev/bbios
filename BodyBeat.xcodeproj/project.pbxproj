@@ -31,6 +31,7 @@
 		048CAC5B1C41CAB400C7A6A3 /* readme.md in Sources */ = {isa = PBXBuildFile; fileRef = 048CAC5A1C41CAB400C7A6A3 /* readme.md */; };
 		048CAC5E1C41CE1C00C7A6A3 /* BKLandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 048CAC5D1C41CE1C00C7A6A3 /* BKLandingViewController.m */; };
 		048CAC621C41CE7000C7A6A3 /* BKInitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 048CAC611C41CE7000C7A6A3 /* BKInitialViewController.m */; };
+		04D4887B1C515B0200854D91 /* temp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D488791C515B0200854D91 /* temp.storyboard */; };
 		2EEAB35405B602B24FEEE537 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0B1748A4A21CCC347DD88F /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +94,7 @@
 		048CAC5D1C41CE1C00C7A6A3 /* BKLandingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BKLandingViewController.m; path = Pages/Landing/Controller/BKLandingViewController.m; sourceTree = "<group>"; };
 		048CAC601C41CE7000C7A6A3 /* BKInitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BKInitialViewController.h; path = "Pages/Initial Navigation/BKInitialViewController.h"; sourceTree = "<group>"; };
 		048CAC611C41CE7000C7A6A3 /* BKInitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BKInitialViewController.m; path = "Pages/Initial Navigation/BKInitialViewController.m"; sourceTree = "<group>"; };
+		04D4887A1C515B0200854D91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/temp.storyboard; sourceTree = "<group>"; };
 		0C7139A341457F812E410AAE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		2C0B1748A4A21CCC347DD88F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9BC090AA28FF4389913EED4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -350,6 +352,7 @@
 			children = (
 				048CAC1C1C4122A600C7A6A3 /* Main.storyboard */,
 				048CAC211C4122A600C7A6A3 /* LaunchScreen.storyboard */,
+				04D488791C515B0200854D91 /* temp.storyboard */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -521,6 +524,7 @@
 			files = (
 				0412C3511C44FCB900D366C6 /* Common.h in Resources */,
 				048CAC231C4122A600C7A6A3 /* LaunchScreen.storyboard in Resources */,
+				04D4887B1C515B0200854D91 /* temp.storyboard in Resources */,
 				048CAC201C4122A600C7A6A3 /* Assets.xcassets in Resources */,
 				048CAC1E1C4122A600C7A6A3 /* Main.storyboard in Resources */,
 				048CAC541C41253C00C7A6A3 /* FacebookSDKStrings.bundle in Resources */,
@@ -658,6 +662,14 @@
 				048CAC221C4122A600C7A6A3 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		04D488791C515B0200854D91 /* temp.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04D4887A1C515B0200854D91 /* Base */,
+			);
+			name = temp.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

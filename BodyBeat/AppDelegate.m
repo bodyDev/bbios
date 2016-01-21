@@ -27,7 +27,7 @@
     if (![[BKCache sharedManager] checkAppInstalled]) {
         
         //Create app default properties for first launch.
-        [[BKCache sharedManager] setAppDefaults];
+     //   [[BKCache sharedManager] setAppDefaults];
     }
     
     // 2. Start monitoring for connection
